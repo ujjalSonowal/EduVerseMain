@@ -5,9 +5,11 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import { useNavigate } from "react-router-dom";
 
 const Course = (props) => {
-  const { name, setShowClasses } = props;
+  const { name, courseId } = props;
+  const navigate = useNavigate();
 
   const bull = (
     <Box
@@ -20,28 +22,31 @@ const Course = (props) => {
 
   return (
     <div>
-      <div style={{ marginTop: "20px" }} onClick={() => setShowClasses()}>
+      <div
+        style={{ marginTop: "20px" }}
+        onClick={() => navigate(`/classes/${courseId}`)}
+      >
         <Card sx={{ minWidth: 275 }}>
           <CardContent>
             <Typography
               sx={{ fontSize: 14 }}
               color="text.secondary"
               gutterBottom
-            ></Typography>
+            ></Typography>{" "}
             <Typography variant="h5" component="div">
-              {name}
-            </Typography>
+              {" "}
+              {name}{" "}
+            </Typography>{" "}
             <Typography variant="body2">
-              information about course
-              <br />
-              Teacher name..
-            </Typography>
-          </CardContent>
+              information about course <br />
+              Teacher name..{" "}
+            </Typography>{" "}
+          </CardContent>{" "}
           <CardActions>
-            <Button size="small">More</Button>
-          </CardActions>
-        </Card>
-      </div>
+            <Button size="small"> More </Button>{" "}
+          </CardActions>{" "}
+        </Card>{" "}
+      </div>{" "}
     </div>
   );
 };

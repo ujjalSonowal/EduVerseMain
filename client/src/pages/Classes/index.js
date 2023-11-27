@@ -4,12 +4,11 @@ import AppBar from "@mui/material/AppBar";
 import CssBaseline from "@mui/material/CssBaseline";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import CourseList from "../../components/CourseList";
 import Sidebar from "../../components/Sidebar";
 import ClassList from "../../components/ClassList";
 import Button from "@mui/material/Button";
 
-const Courses = () => {
+const Classes = () => {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
@@ -31,7 +30,7 @@ const Courses = () => {
               }}
             >
               {" "}
-              Courses{" "}
+              Classes{" "}
             </h1>{" "}
             <div style={{ textAlign: "right", paddingBottom: "40px" }}>
               <input
@@ -55,7 +54,7 @@ const Courses = () => {
                 Search{" "}
               </Button>{" "}
             </div>{" "}
-            <CourseList />
+            <ClassList />
           </section>{" "}
         </Typography>{" "}
       </Box>{" "}
@@ -63,4 +62,4 @@ const Courses = () => {
   );
 };
 
-export default Courses;
+export default Classes;

@@ -1,13 +1,13 @@
 import React from "react";
 import Course from "./Course";
 
-const CoursesList = ({ setShowClasses }) => {
+const CoursesList = () => {
   return (
     <div>
-      <Course name="AI/ML" setShowClasses={setShowClasses} />
-      <Course name="python" setShowClasses={setShowClasses} />
-      <Course name="Java" setShowClasses={setShowClasses} />
-      <Course name="DAA" setShowClasses={setShowClasses} />
+      <Course name="AI/ML" courseId="1" />
+      <Course name="python" courseId="2" />
+      <Course name="Java" courseId="3" />
+      <Course name="DAA" courseId="4" />
     </div>
   );
 };

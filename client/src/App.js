@@ -7,18 +7,20 @@ import Profile from "./pages/Profile/profile";
 import { Routes, Route } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import Courses from "./pages/Courses";
+import Classes from "./pages/Classes";
 
 function App() {
   return (
     <>
       <Header />
       <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/courses" Component={Courses} />
-        <Route path="/dashboard" Component={Dashboard}/>
+        <Route exact path="/" element={<Home />} />{" "}
+        <Route path="/login" element={<Login />} />{" "}
+        <Route path="/register" element={<Register />} />{" "}
+        <Route path="/profile" element={<Profile />} />{" "}
+        <Route path="/courses" Component={Courses} />{" "}
+        <Route path="/dashboard" Component={Dashboard} />{" "}
+        <Route path="/classes/:courseId" Component={Classes} />{" "}
       </Routes>{" "}
     </>
   );
