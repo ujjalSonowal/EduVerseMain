@@ -6,10 +6,17 @@ const ClassList = () => {
   const { courseId } = useParams();
   return (
     <div>
-      <h1> Course ID: {courseId} </h1> <Class classId="1" />
-      <Class classId="2" />
-      <Class classId="3" />
-      <Class classId="4" />
+      <Class
+        classId="2"
+        name={"class 1"}
+        desc={"Meaning and definition of AI"}
+      />{" "}
+      <Class
+        classId="3"
+        name={"class 2"}
+        desc={"Relationship between AI and ML"}
+      />{" "}
+      <Class classId="4" name={"class 3"} desc={"The foundation of AI"} />{" "}
     </div>
   );
 };

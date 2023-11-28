@@ -9,7 +9,6 @@ import "./profile.css";
 import Sidebar from "../../components/Sidebar";
 // import { FormControl, InputLabel, Input } from "@mui/material";
 
-
 export default function Profile() {
   return (
     <Box sx={{ display: "flex" }}>
@@ -17,11 +16,10 @@ export default function Profile() {
       <AppBar
         position="fixed"
         sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
-      >
-      </AppBar>
-      
+      ></AppBar>
+
       <Sidebar />
-      
+
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <Toolbar />
         <Typography>
@@ -33,12 +31,27 @@ export default function Profile() {
               <form>
                 <div className="form_input">
                   <label htmlFor="Name"> Name </label>{" "}
-                  <input type="name" name="name" id="name" />{" "}
+                  <input
+                    value={"Biptu Das"}
+                    type="name"
+                    name="name"
+                    id="name"
+                  />{" "}
                   <label htmlFor="rollno"> Roll No. </label>{" "}
-                  <input type="text" name="rollno" id="rollno" />{" "}
+                  <input
+                    value={"MCA/22/005"}
+                    type="text"
+                    name="rollno"
+                    id="rollno"
+                  />{" "}
                   <label htmlFor="password"> Password </label>{" "}
                   <div className="two">
-                    <input type="password" name="password" id="password" />{" "}
+                    <input
+                      value={"*******"}
+                      type="password"
+                      name="password"
+                      id="password"
+                    />{" "}
                   </div>{" "}
                 </div>{" "}
               </form>{" "}
